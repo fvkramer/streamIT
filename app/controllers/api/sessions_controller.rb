@@ -15,6 +15,6 @@ class Api::SessionsController < ApplicationController
 
     def destroy
         logout!
-        # redirect_to new_session_url
+        render "api/users/show"
     end
 end
