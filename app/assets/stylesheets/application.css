@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+ #root {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .session-greeting {
+  display: block;
+  }
+
+ .session-form {
+   border: 1px solid red;
+   padding: 15px;
+ }
+
+ .login-signup {
+   display: inline-block;
+   background: pink;
+ }
+
+ .login-form-container {
+   /* margin: 0 auto;
+   border: 1px solid black; */
+ }

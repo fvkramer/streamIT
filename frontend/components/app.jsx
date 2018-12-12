@@ -14,13 +14,15 @@ import SignUpFormContainer from './session_form/signup_form_container';
 
  //default rendering. Incorporate Route components        
 const App = () => (
-    <div>
+    <div className="session-greeting">
         <h1>Hello World, We are in the App Component of Youtube</h1>
+       <div className="session-form">
         <GreetingContainer />
         <Switch>
-            <AuthRoute exact path="/login" component={LogInFormContainer} />
-            <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+          <AuthRoute exact path="/login" component={LogInFormContainer} />
+          <AuthRoute exact path="/signup" component={SignUpFormContainer} />
         </Switch>
+       </div> 
     </div>
 )
 
