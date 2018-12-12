@@ -1,11 +1,12 @@
-//**updated default state */
 
-//user slice of state
+import { RECEIVE_CURRENT_USER } from '../../actions/session_actions';
 
 export default (state={}, action) => {
     switch (action.type) {
-        default:
-            return state;
+      case RECEIVE_CURRENT_USER:
+        return Object.assign({}, state, { [action.currentUser.id]: action.currentUser });
+      default:
+        return state;
     }
 }
 

@@ -4,6 +4,8 @@ import { Link,
          Redirect,
          Switch} from 'react-router-dom';
 
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+
 //containers
 import GreetingContainer from  './greeting/greeting_container'; 
 
@@ -16,8 +18,8 @@ const App = () => (
         <h1>Hello World, We are in the App Component of Youtube</h1>
         <GreetingContainer />
         <Switch>
-            <Route exact path="/login" component={LogInFormContainer} />
-            <Route exact path="/signup" component={SignUpFormContainer} />
+            <AuthRoute exact path="/login" component={LogInFormContainer} />
+            <AuthRoute exact path="/signup" component={SignUpFormContainer} />
         </Switch>
     </div>
 )

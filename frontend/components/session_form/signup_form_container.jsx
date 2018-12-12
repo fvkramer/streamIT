@@ -1,19 +1,21 @@
 import { connect } from 'react-redux';
-import { signup } from '../../util/session_api_util';
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { signup } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
-//map state to props
-const msp = state => ({
-    user: {
-        username: '',
-        password: ''
-    },
-    formType: "Sign Up"
-})
+const msp = ({ errors }) => {
+  return {
+    errors: errors.session,
+    formType: 'Signup',
+    navLink: <Link to="/login">Log In</Link>,
+  };
+};
 
-const mdp = dispatch => ({
-    action: user => dispatch(signup(user))
-})
+const mdp = dispatch => {
+  return {
+    processForm: (user) => dispatch(signup(user)),
+  };
+};
 
-export default connect(msp, mdp)(SessionForm)
+export default connect(msp, mdp)(SessionForm);

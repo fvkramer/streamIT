@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     
-    helper_method :current_user, :ensure_logged_in, :logged_in?
+    helper_method :current_user, :logged_in?
 
     private
     def current_user
@@ -14,15 +14,16 @@ class ApplicationController < ActionController::Base
 
     def login!(user)
         session[:session_token] = user.reset_session_token!
-        user
+        @current_user = user
     end
 
-    def logout!
+    def logout
         @current_user.reset_session_token!
         session[:session_token] = nil
+        @current_user = nil
     end
     
     def ensure_logged_in
-        redirect_to new_session_url unless logged_in?
+        render json: { base: ['Invalid Credentials'] }, status: 401 unless logged_in?
     end
 end
