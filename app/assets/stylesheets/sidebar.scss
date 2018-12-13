@@ -3,7 +3,7 @@
    border-top: none;
    background: #f9f7f7;
    width: 240px;
-   height: 500px;
+   height: 800px;
  }
 
  //first sidebar component
@@ -44,6 +44,9 @@
  
 
 //sidebar best links
+.sidebar-main-best-links {
+  border-bottom: 2px solid #ccc;
+}
 
 .sidebar-main-best-links li:hover {
   cursor: pointer;
@@ -61,30 +64,38 @@
 }
 
 .yt-best-music {
-  background-position: 0px;
+  background-position: 0px -1px;
 }
 
 .yt-best-sports {
-  background-position: 0px;
+  background-position: 0px -40px;
 }
 
 .yt-best-gaming {
-  background-position: 0px;
+  background-position: 0px -80px;
 }
 
-.yt-best-music {
-  background-position: 0px;
+.yt-best-movies {
+  background-position: 0px -120px;
 }
 
-.yt-best-music {
-  background-position: 0px;
+.yt-best-tvshows {
+  background-position: 0px -160px;
 }
 
-.yt-best-music {
-  background-position: 0px;
+.yt-best-news {
+  background-position: 0px -200px;
 }
 
-.yt-best-music {
-  background-position: 0px;
+.yt-best-live {
+  background-position: 0px -240px;
+}
+
+.yt-best-spotlight {
+  background-position: 0px -280px;
+}
+
+.yt-best-360 {
+  background-position: 0px -320px;
 }
 
