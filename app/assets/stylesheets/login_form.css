@@ -11,12 +11,6 @@
   justify-content: flex-end;
 }
 
-/* .login-image {
-  background-image: image_url("youtube_central.png");
-  background-size: 500px 500px;
-  height: 500px;
-  width: 500px;
-} */
 
 .login-form {
   position: relative;
@@ -39,7 +33,6 @@
   right: 134px;
   width: 40px;
   height: 40px;
-  background-image: image_url('"youtube_central.png"');
 }
 
 .login-close-button:hover {

@@ -4,8 +4,6 @@ import { Link,
          Redirect,
          Switch} from 'react-router-dom';
 
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
-
 //containers
 import Modal from './modal/modal';
 import MastHead from './home/masthead/masthead';
@@ -24,8 +22,6 @@ const App = () => (
       <Feed />
     </section>
     <Switch>
-      {/* <AuthRoute exact path="/login" component={LogInFormContainer} />
-      <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
     </Switch>
   </div>
     

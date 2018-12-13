@@ -1,7 +1,7 @@
 .sidebar-container {
    border: 1px solid #ccc;
    border-top: none;
-   background: #eee;
+   background: #f9f7f7;
    width: 240px;
    height: 500px;
  }
@@ -19,25 +19,24 @@
 
  .sidebar-main-top button {
    border: none;
-  //  background: inherit;
  }
 
 .home-icon {
-  background-image: image_url("home.png");
+  background-image: image-url("home.png");
   background-size: 30px 30px;
   width: 30px;
   height: 30px;
 }
 
 .trending-icon {
-  background-image: image_url("trending_history.png");
+  background-image: image-url("trending_history.png");
   background-position: -7px -1px;
   width: 30px;
   height: 30px;
 }
 
 .history-icon {
-  background-image: image_url("trending_history.png");
+  background-image: image-url("trending_history.png");
   background-position: -7px -42px;
   width: 30px;
   height: 30px;
@@ -58,7 +57,7 @@
   height: 40px;
   width: 40px;
   display: inline-block;
-  background-image: image_url("bestof_youtube.png");
+  background-image: image-url("bestof_youtube.png");
 }
 
 .yt-best-music {
@@ -88,12 +87,4 @@
 .yt-best-music {
   background-position: 0px;
 }
-
-//
-// .test-button {
-//   height: 40px;
-//   width: 40px;
-//   background-image: image_url("bestof_youtube.png");
-//   background-position: 0 -10px;
-// }
 
