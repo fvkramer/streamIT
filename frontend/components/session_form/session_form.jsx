@@ -45,11 +45,11 @@ class SessionForm extends React.Component {
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br />
-          <div className="login-image"></div>
+          <div className="login-youtube-logo"><img src="https://image.freepik.com/free-icon/youtube-logo_318-33597.jpg" alt="" height="60" width="60"/></div>
           {this.renderErrors()}
           <div className="login-form">
             <br />
-            <div onClick={this.props.closeModal} className="login-close-button">X</div>
+            <div onClick={this.props.closeModal} className="login-close-button">X</div> 
             <label>
               <input type="text"
                 value={this.state.username}

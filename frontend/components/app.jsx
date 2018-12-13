@@ -18,7 +18,6 @@ const App = () => (
     <Modal />
     <header>
       <MastHead />
-      <GreetingContainer />
     </header>
     <section className="main-section">
       <SectionSideBar />
