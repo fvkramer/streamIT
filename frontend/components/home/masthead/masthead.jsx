@@ -1,9 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { openModal } from '../../../actions/modal_actions'
 
 import MastHeadSearchContainer from './masthead_search_container';
 
-const MastHead = () => {
+const mdp = dispatch => ({
+  userAuth: (
+    <button id="youtube-signin" onClick={() => dispatch(openModal('login'))}>
+      SIGN IN
+    </button>
+  )
+});
+
+const MastHead = ({userAuth}) => {
     return (
       <div className="masthead-container">
         <button className="masthead-nav-bars"><i className="fa fa-bars"></i></button>
@@ -15,9 +24,10 @@ const MastHead = () => {
           <button aria-label="Messages" className="msth-messages"></button>
           <button aria-label="Settings" className="msth-settings"></button>
         </div>
-        <a href="#" id="youtube-signin">SIGN IN</a>
+        {userAuth}
+        {/* <a href="#" id="youtube-signin">SIGN IN</a> */}
       </div>
     )
 }
 
-export default MastHead;
+export default connect(null, mdp)(MastHead);
