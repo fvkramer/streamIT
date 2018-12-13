@@ -10,14 +10,20 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import MastHead from './home/masthead/masthead';
 import GreetingContainer from  './greeting/greeting_container'; 
-      
+import SectionSideBar from './home/sidebar/feed_sidebar';
+import Feed from './home/feed/feed';      
+
 const App = () => (
   <div className="main-container">
     <Modal />
     <header>
       <MastHead />
-      <GreetingContainer />
+      {/* <GreetingContainer /> */}
     </header>
+    <section className="main-section">
+      <SectionSideBar />
+      <Feed />
+    </section>
     <Switch>
       {/* <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}

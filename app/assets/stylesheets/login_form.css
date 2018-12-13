@@ -11,23 +11,32 @@
   justify-content: flex-end;
 }
 
-.login-image {
-  /* background-image: image_url("youtube_central.png");
-  background-size: 50px 50px;
-  height: 50px;
-  width: 50px; */
-}
+/* .login-image {
+  background-image: image_url("youtube_central.png");
+  background-size: 500px 500px;
+  height: 500px;
+  width: 500px;
+} */
 
 .login-form {
-  border: 1px solid black;
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
+.login-close-button {
+  position: absolute;
+  top: -60px;
+  right: 10px;
+  border: none;
+  font-size: 29px;
+}
+
 .login-form-container input {
   padding: 10px;
   margin: 15px;
+  margin-bottom: 0px;
   font-size: 14px;
   color: black;
   width: 250px;
@@ -37,6 +46,7 @@
 .submit-button {
   padding: 14px;
   margin: 13px;
+  margin-top: 5px;
   width: 276px;
   color: #fff;
   font-size: 20px;

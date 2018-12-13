@@ -14,4 +14,12 @@
  *= require_self
  */
 
- 
+ .main-section {
+   display: flex;
+ }
+
+ .main-feed-container {
+   width: 1220px;
+   height: 500px;
+ }
+
