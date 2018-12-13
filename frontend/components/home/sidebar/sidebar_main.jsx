@@ -4,15 +4,11 @@ const SideBarMain = () => {
   return (
     <div className="sidebar-main-top">
       Main Navigation
-      <br/>
-    <nav>
+     <ul>
       <li><a href=""><button className="home-icon"></button><span>Home</span></a></li>
       <li><a href=""><button className="trending-icon"></button><span>Trending</span></a></li>
       <li><a href=""><button className="history-icon"></button><span>History</span></a></li>
-    </nav>
-      
-      
-      
+     </ul>  
     </div>
   )
 }

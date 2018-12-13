@@ -43,3 +43,57 @@
   height: 30px;
 }
  
+
+//sidebar best links
+
+.sidebar-main-best-links li:hover {
+  cursor: pointer;
+  // background: black;
+  border: 1px solid black;
+ 
+}
+
+[class*="yt-best-"] {
+  border: none;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-image: image_url("bestof_youtube.png");
+}
+
+.yt-best-music {
+  background-position: 0px;
+}
+
+.yt-best-sports {
+  background-position: 0px;
+}
+
+.yt-best-gaming {
+  background-position: 0px;
+}
+
+.yt-best-music {
+  background-position: 0px;
+}
+
+.yt-best-music {
+  background-position: 0px;
+}
+
+.yt-best-music {
+  background-position: 0px;
+}
+
+.yt-best-music {
+  background-position: 0px;
+}
+
+//
+// .test-button {
+//   height: 40px;
+//   width: 40px;
+//   background-image: image_url("bestof_youtube.png");
+//   background-position: 0 -10px;
+// }
+

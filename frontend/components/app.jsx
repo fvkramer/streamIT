@@ -18,7 +18,7 @@ const App = () => (
     <Modal />
     <header>
       <MastHead />
-      {/* <GreetingContainer /> */}
+      <GreetingContainer />
     </header>
     <section className="main-section">
       <SectionSideBar />

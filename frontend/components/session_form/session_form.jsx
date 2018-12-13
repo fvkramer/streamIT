@@ -22,6 +22,12 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  // handleModal(e) {
+  //   debugger;
+  //   e.preventDefault()
+  //   this.props.closeModal();
+  // }
+
   renderErrors() {
     return (
       <ul>
@@ -43,7 +49,7 @@ class SessionForm extends React.Component {
           {this.renderErrors()}
           <div className="login-form">
             <br />
-            <button onClick={this.props.closeModal} className="login-close-button">X</button>
+            <div onClick={this.props.closeModal} className="login-close-button">X</div>
             <label>
               <input type="text"
                 value={this.state.username}

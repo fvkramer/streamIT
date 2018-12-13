@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/session_api_util';
+import { closeModal } from './modal_actions';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
@@ -31,7 +32,7 @@ export const login = user => dispatch => (
         dispatch(receiveCurrentUser(user))
     ), err => (
         dispatch(receiveErrors(err.responseJSON))
-    ))
+    )).then( () => dispatch(closeModal()))
 );
 
 export const logout = () => dispatch => (

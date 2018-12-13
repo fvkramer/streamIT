@@ -5,6 +5,7 @@ export default (state = null, action) => {
     case OPEN_MODAL:
       return action.modal;
     case CLOSE_MODAL:
+      // debugger;
       return null;
     default:
       return state;
