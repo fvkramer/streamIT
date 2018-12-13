@@ -16,17 +16,26 @@ class SessionForm extends React.Component {
     });
   }
 
-  handleSubmit(e) {
+  handleSubmit(e, type) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    let user = Object.assign({}, this.state);
+    switch(type) {
+      case "signin":
+        this.props.processForm(user);
+        break;
+      case "signup":
+        this.props.signUp(user);
+        break;
+      case "demo":
+        user = { username: 'DemoUser', password: 'password'}
+        this.props.processForm(user);
+        break;
+      default:
+        return null;
+    }
   }
 
-  // handleModal(e) {
-  //   debugger;
-  //   e.preventDefault()
-  //   this.props.closeModal();
-  // }
+  
 
   renderErrors() {
     return (
@@ -43,7 +52,8 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+      {/* onSubmit={this.handleSubmit}  */}
+        <form className="login-form-box">
           <br />
           <div className="login-youtube-logo"><img src="https://image.freepik.com/free-icon/youtube-logo_318-33597.jpg" alt="" height="60" width="60"/></div>
           {this.renderErrors()}
@@ -68,7 +78,9 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <button className="submit-button">{this.props.formType}</button>
+            <button onClick={(e) => this.handleSubmit(e, "signin")} className="submit-button">SIGN IN</button>
+            <button onClick={(e) => this.handleSubmit(e, "signup")} className="submit-button">SIGN UP</button>
+            <button onClick={(e) => this.handleSubmit(e, "demo")} className="submit-button">DEMO LOGIN</button>
           </div>
         </form>
       </div>

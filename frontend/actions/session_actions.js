@@ -24,7 +24,7 @@ export const signup = user => dispatch => (
         dispatch(receiveCurrentUser(user))
     ), err => (
         dispatch(receiveErrors(err.responseJSON))
-    ))
+    )).then(() => dispatch(closeModal()))
 );
 
 export const login = user => dispatch => (
