@@ -38,15 +38,33 @@ class SessionForm extends React.Component {
   
 
   renderErrors() {
-    return (
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+    if (this.props.errors.length === 2) {
+      return (
+        <div className="login-errors-2">
+          <ul>
+            {this.props.errors.map((error, i) => (
+              <li key={`error-${i}`}>
+                {error}
+              </li>
+            ))}
+          </ul>
+        </div> 
+      );
+    } else if (this.props.errors.length === 1) {
+      return (
+        <div className="login-errors-1">
+          <ul>
+            {this.props.errors.map((error, i) => (
+              <li key={`error-${i}`}>
+                {error}
+              </li>
+            ))}
+          </ul>
+        </div> 
+      );
+    } else {
+      return null;
+    }
   }
 
   render() {
@@ -79,8 +97,10 @@ class SessionForm extends React.Component {
             </label>
             <br />
             <button onClick={(e) => this.handleSubmit(e, "signin")} className="submit-button">SIGN IN</button>
-            <button onClick={(e) => this.handleSubmit(e, "signup")} className="submit-button">SIGN UP</button>
-            <button onClick={(e) => this.handleSubmit(e, "demo")} className="submit-button">DEMO LOGIN</button>
+            <div className="signup-demo-buttons">
+              <button onClick={(e) => this.handleSubmit(e, "signup")} className="submit-button">SIGN UP</button>
+              <button onClick={(e) => this.handleSubmit(e, "demo")} className="submit-button" id="demo">DEMO LOGIN</button>
+            </div>
           </div>
         </form>
       </div>
