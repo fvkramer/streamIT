@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ html {
+   font-family: "Roboto", Arial, sans-serif;
+ }
+
  .main-section {
    display: flex;
  }

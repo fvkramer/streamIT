@@ -4,12 +4,13 @@
    background: #f9f7f7;
    width: 240px;
    height: 800px;
+   overflow: scroll;
  }
 
  //first sidebar component
 .sidebar-main-top {
   padding: 10px;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
  .sidebar-main-top li, a {
@@ -45,7 +46,7 @@
 
 //sidebar best links
 .sidebar-main-best-links {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .sidebar-main-best-links li:hover {
@@ -99,3 +100,159 @@
   background-position: 0px -320px;
 }
 
+//sidebar browse section
+///////////////////////////////
+
+.sidebar-browse {
+  border-bottom: 1px solid #ccc;
+  line-height: 10px;
+  display: flex;
+  position: relative;
+}
+
+.sidebar-browse-icon {
+  display: inline-block;
+  background-image: image-url("browse.png");
+  background-size: 30px 30px;
+  height: 30px;
+  width: 30px;
+  position: aboslute;
+  top: 6px;
+  left: 10px;
+}
+
+.sidebar-browse > p {
+  padding: 16px 10px 16px 80px;
+}
+
+
+
+//sidebar signin section
+//////////////////////////////
+
+.sidebar-signin {
+  border-bottom: 2px solid #ccc;
+}
+
+
+
+//sidebar additional features
+//////////////////////////////
+
+.sidebar-additional-features {
+  border-bottom: 1px solid #ccc;
+}
+
+#items-yt-more a{
+  display: block;
+}
+
+[class*="additional-features-"] {
+  display: inline-block;
+  background-image: image_url("play_and_radio.png");
+  background-size: 45px;
+  height: 30px;
+  width: 40px;
+}
+
+.additional-features-premium {
+  background-position: 0px 2px;
+}
+
+.additional-features-live {
+  background-position: 0px 39px;
+}
+
+//sidebar settings
+//////////////////////////////
+
+.sidebar-settings {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  color: black;
+}
+
+.sidebar-settings a {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-settings i {
+  margin-left: 10px;
+}
+
+.sidebar-settings span {
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.sidebar-settings span {
+  display: inline-block;
+  color: black;
+}
+
+[class*="yt-settings-"] {
+  display: inline-block;
+  background-image: image_url("settings.png");
+  background-size: 45px;
+  height: 45px;
+  width: 45px;
+}
+
+.yt-settings-settings {
+  background-position: 0 11px;
+}
+
+.yt-settings-report-history {
+  background-position: 0 -28px;
+}
+
+.yt-settings-help {
+  background-position: 0 -60px;
+}
+
+.yt-settings-feedback {
+  background-position: 0 45px;
+}
+
+
+
+//sidebar footer
+//////////////////////////////
+.sidebar-footer-links-container {
+  margin: 10px auto;
+  width: 200px;
+  line-height: 11px;
+}
+
+.sidebar-footer-links-container a {
+  padding: 5px;
+  font-weight: 500;
+  color: #847f7f;
+}
+
+#guidelinks-primary {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// #guidelinks-primary a {
+//   padding: 5px;
+// }
+
+#guidelinks-secondary {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// #guidelinks-secondary a {
+//   padding: 5px;
+// }
+
+#copy-streamit {
+  padding: 5px;
+  margin-top: 36px;
+  color: #11111199;
+}

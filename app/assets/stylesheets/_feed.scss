@@ -1,0 +1,18 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px 200px;
+}
+
+.grid-items {
+  max-width: 210px;
+}
+
+.feed-recommended {
+  width: 1070px;
+  height: 563px;
+  padding-left: 30px;
+}
+
+// for single row panes
+// width: 1070
+// height: 210
