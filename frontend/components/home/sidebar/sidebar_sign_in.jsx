@@ -14,11 +14,13 @@ const mdp = dispatch => ({
 const SideBarSignIn = ({signIn}) => {
   let button = signIn;
   return (
-    <div className="sidebar-signin">
-      <p>
-        Sign in now to see your channels and recommendations!
-      </p>
-      {button}
+    <div className="sidebar-signin-container">
+      <div className="sidebar-signin-content">
+        <p>
+          Sign in now to see your channels and recommendations!
+        </p>
+        {button}
+      </div>   
     </div>
   )
 }

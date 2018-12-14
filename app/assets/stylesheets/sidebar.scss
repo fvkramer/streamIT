@@ -125,15 +125,20 @@
   padding: 16px 10px 16px 80px;
 }
 
-
-
 //sidebar signin section
 //////////////////////////////
 
-.sidebar-signin {
+.sidebar-signin-container {
   border-bottom: 2px solid #ccc;
+  padding: 24px;
 }
 
+.sidebar-signin-container button {
+  margin-top: 10px;
+  border: none;
+  padding-left: none;
+  background-color: inherit;
+}
 
 
 //sidebar additional features
@@ -141,10 +146,30 @@
 
 .sidebar-additional-features {
   border-bottom: 1px solid #ccc;
+  padding: 5px 0 12px;
+  color: black;
+}
+
+#additional-features-header {
+  display: block;
+  padding: 8px 24px;
+  color: #696868;
 }
 
 #items-yt-more a{
-  display: block;
+  display: flex;
+  align-items: center;
+}
+
+#items-yt-more i {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#items-yt-more span {
+  padding-top: 10px;
+  margin-left: 17px;
+  color: black;
 }
 
 [class*="additional-features-"] {
@@ -169,7 +194,6 @@
 .sidebar-settings {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
-  color: black;
 }
 
 .sidebar-settings a {
@@ -184,10 +208,6 @@
 .sidebar-settings span {
   padding-top: 10px;
   margin-left: 10px;
-}
-
-.sidebar-settings span {
-  display: inline-block;
   color: black;
 }
 

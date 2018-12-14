@@ -3,7 +3,7 @@ import React from 'react';
 const SideBarAdditionalFeatures = () => {
   return (
     <div className="sidebar-additional-features">
-      <h3>MORE FROM YOUTUBE</h3>
+      <h3 id="additional-features-header">MORE FROM YOUTUBE</h3>
       <div id="items-yt-more">
         <a href="">
           <i className="additional-features-premium"></i>
