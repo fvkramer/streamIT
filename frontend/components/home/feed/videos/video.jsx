@@ -9,11 +9,11 @@ const msp = state => {
   const videos = Object.values(state.entities.videos)
   return {
     videos: videos
-  }
+  } 
 }
 
 const Video = () => {
-  return (
+  return ( 
     <div className="video-container">
       <VideoDisplay />
       <VideoDescription />
