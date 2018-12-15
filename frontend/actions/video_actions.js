@@ -23,13 +23,15 @@ export const removeVideo = (videoId) => ({
 }) 
 
 //thunks
-export const fetchVideos = searchQuery => dispatch => (
-  APIUtil.fetchVideos(searchQuery).then(videos => dispatch(receiveVideos(videos)))
+export const fetchVideos = () => dispatch => (
+  APIUtil.fetchVideos().then(videos => dispatch(receiveVideos(videos)))
 )
 
-export const fetchVideo = searchQuery => dispatch => (
-  APIUtil.fetchVideo(searchQuery).then(video => dispatch(receiveVideo(video)))
-)
+export const fetchVideo = videoId => dispatch => {
+  return (
+  APIUtil.fetchVideo(videoId).then(video => dispatch(receiveVideo(video)))
+  )
+}
 
 export const createVideo = video => dispatch => (
   APIUtil.createVideo(video).then(video => dispatch(receiveVideo(video)))
@@ -40,5 +42,5 @@ export const updateVideo = video => dispatch => (
 )
 
 export const deleteVideo = videoId => dispatch => (
-  APIUtil.deleteVideo(videoId).then(video => dispatch(removeVideo(video.id)))
+  APIUtil.deleteVideo(videoId).then(video => dispatch(removeVideo(videoId)))
 )

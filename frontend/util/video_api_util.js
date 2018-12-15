@@ -1,5 +1,5 @@
 //finish writing video ajax queries
-export const fetchVideos = (searchQuery) => (
+export const fetchVideos = () => (
   $.ajax({
     method: "GET",
     url: "/api/videos",
@@ -7,12 +7,14 @@ export const fetchVideos = (searchQuery) => (
 )
 
 //need to get video with serach term query instead of id
-export const fetchVideo = searchQuery => (
-  $.ajax({
-    method: "GET",
-    url: "/api/videos"
-  })
-)
+export const fetchVideo = videoId => {
+  return (
+    $.ajax({
+      method: "GET",
+      url: `/api/videos/${videoId}`
+    })
+  )
+}
 
 export const createVideo = video => (
   $.ajax({

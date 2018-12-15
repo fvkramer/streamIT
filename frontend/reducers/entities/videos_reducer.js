@@ -7,6 +7,7 @@ const _nullVideo = {
 } 
 
 export default (state = _nullVideo, action) => {
+  debugger;
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_VIDEOS:
