@@ -8,6 +8,7 @@
 
 
 #Users
+User.delete_all
 
 User.create!(username: 'DemoUser', password: 'password') #1
 User.create!(username: 'Filipp', password: 'password') #2
@@ -32,6 +33,7 @@ User.create!(username: 'Beats by Moshe', password: 'tothewindowtothewall', descr
 User.create!(username: 'Tech at Large', password: 'mooreslaw', description: 'Subscribe for the latest and newest information on tech!', category: 'Science and Technology') #20
 
 #videos (48)
+Video.delete_all
 
 seed_vid_1 = Video.create!(title: "Got Castles", description: "Animated musical of Castle Kid Cartoon. Singing, Dancing, Birds, and Birdhouses", category: 'Film and Animation', channel_id: 12) # https://s3-us-west-1.amazonaws.com/streamit-videos/animations/got_castles.mp4
   seed_vid_1_attachment = open("https://s3-us-west-1.amazonaws.com/streamit-videos/animations/got_castles.mp4")
