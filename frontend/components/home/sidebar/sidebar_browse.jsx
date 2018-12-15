@@ -3,7 +3,9 @@ import React from 'react';
 const SideBarBrowse = () => {
   return (
     <div className="sidebar-browse">
-      <div className="sidebar-browse-icon"></div> <p>Browse Channels</p>
+      <a href="">
+        <i className="sidebar-browse-icon"></i> <p>Browse Channels</p> 
+      </a>
     </div>
   )
 }

@@ -106,25 +106,30 @@
 .sidebar-browse {
   border-bottom: 1px solid #ccc;
   line-height: 10px;
+  padding: 10px 0;
+}
+
+.sidebar-browse a {
   display: flex;
-  position: relative;
+  align-items: center;
+  box-sizing: border-width;
+  padding: 0 18px;
 }
 
 .sidebar-browse-icon {
   display: inline-block;
   background-image: image-url("browse.png");
   background-size: 30px 30px;
+  margin: 0;
   height: 30px;
   width: 30px;
-  position: aboslute;
-  top: 6px;
-  left: 10px;
 }
 
-.sidebar-browse > p {
-  padding: 16px 10px 16px 80px;
+.sidebar-browse p {
+  margin-left: 30px;
+  color: black;
 }
-
+ 
 //sidebar signin section
 //////////////////////////////
 
