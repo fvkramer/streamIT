@@ -7,7 +7,6 @@ import { Link,
 //containers
 import Modal from './modal/modal';
 import MastHead from './home/masthead/masthead';
-import GreetingContainer from  './greeting/greeting_container'; 
 import SectionSideBar from './home/sidebar/feed_sidebar';
 import Feed from './home/feed/feed';      
 
@@ -24,7 +23,7 @@ const App = () => (
     <Switch>
     </Switch>
   </div>
-    
+  
 )
 
 export default App;
