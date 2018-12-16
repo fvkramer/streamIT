@@ -1,4 +1,6 @@
 .feed-main-container {
+  overflow: scroll;
+  height: 800px;
 }
 [class*="feed-sub-container"] {
   padding: 25px 62px;

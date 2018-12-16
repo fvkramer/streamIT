@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   #AWS testing
   has_one_attached :video
+  has_many :subscribers
 
   before_validation :ensure_session_token
 
