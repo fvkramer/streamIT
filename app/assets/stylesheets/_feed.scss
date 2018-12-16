@@ -1,3 +1,28 @@
+.feed-main-container {
+}
+[class*="feed-sub-container"] {
+  padding: 25px 62px;
+  border-bottom: 1px solid #ccc;
+}
+
+.feed-sub-container-1 span {
+  display: block;
+  font-size: 19px;
+  font-weight: 500;
+  color: #000;
+}
+
+[class*="feed-sub-item-container"] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feed-recommended {
+  width: 1070px;
+  height: 563px;
+  padding-left: 30px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 200px 200px 200px 200px 200px;
@@ -7,11 +32,7 @@
   max-width: 230px;
 }
 
-.feed-recommended {
-  width: 1070px;
-  height: 563px;
-  padding-left: 30px;
-}
+
 
 .video-container {
   margin-right: 4px;

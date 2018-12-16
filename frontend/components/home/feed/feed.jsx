@@ -10,7 +10,7 @@ import Misc from './movies';
 const Feed = () => {
   return (
     <div>
-      <section className="main-feed-container">
+      <section className="feed-main-container">
         <Recommended />
         <Music />
         <Sports />

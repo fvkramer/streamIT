@@ -17,7 +17,7 @@ class VideoDisplay extends React.Component {
     } else {
       video = (<video
         width="210"
-        height="200"
+        height="150"
         controls
         src={this.props.videos[14].src}></video>)
     }

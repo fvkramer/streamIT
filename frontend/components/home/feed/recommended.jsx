@@ -3,23 +3,19 @@ import Video from './videos/video';
 
 const Recommended = () => {
   return (
-    <div className="feed-recommended">
-        <div className="feed-recommended-header">
-        <span>Recommended</span>
-      </div>
-      <div className="feed-recommended-contents">
-        <div className="grid-container">
-          <div className="grid-item"><Video /></div>
-          <div className="grid-item"><Video /></div>
-          <div className="grid-item"><Video /></div>
-          <div className="grid-item"><Video /></div>
-          <div className="grid-item"><Video /></div>
-          <div className="grid-item"><Video /></div>
-          <div className="grid-item"><Video /></div>
-          <div className="grid-item"><Video /></div>
-          <div className="grid-item"><Video /></div>
-          <div className="grid-item"><Video /></div>
-        </div>
+    <div className="feed-sub-container-1">
+      <span>Recommended</span>
+      <div className="feed-sub-item-container-recommended">
+        <div className="grid-item"><Video /></div>
+        <div className="grid-item"><Video /></div>
+        <div className="grid-item"><Video /></div>
+        <div className="grid-item"><Video /></div>
+        <div className="grid-item"><Video /></div>
+        <div className="grid-item"><Video /></div>
+        <div className="grid-item"><Video /></div>
+        <div className="grid-item"><Video /></div>
+        <div className="grid-item"><Video /></div>
+        <div className="grid-item"><Video /></div>
       </div>
     </div>   
   )
