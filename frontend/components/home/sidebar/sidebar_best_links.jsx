@@ -3,7 +3,7 @@ import React from 'react';
 const BestLinks = () => {
   return (
     <div className="sidebar-main-best-links">
-      <h6>BEST OF YOUTUBE</h6>
+      <h6 id="guide-section-best-of">best of youtube</h6>
       <ul>
         <li><a href=""><button className="yt-best-music"></button><span>Music</span></a></li>
         <li><a href=""><button className="yt-best-sports"></button><span>Sports</span></a></li>

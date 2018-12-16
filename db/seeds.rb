@@ -39,7 +39,6 @@ seed_vid_1 = Video.create!(title: "Got Castles", description: "Animated musical 
   seed_vid_1_attachment = open("https://s3-us-west-1.amazonaws.com/streamit-videos/animations/got_castles.mp4")
   seed_vid_1.video.attach(io: seed_vid_1_attachment, filename: 'got_castles_video')
 
-
 seed_vid_2 = Video.create!(title: "Popeye For President", description: "Not even Chuck Norris can stop PopEye from the Presidency", category: 'Film and Animation', channel_id: 12) # https://s3-us-west-1.amazonaws.com/streamit-videos/animations/popeye_president.mp4
   seed_vid_2_attachment = open("https://s3-us-west-1.amazonaws.com/streamit-videos/animations/popeye_president.mp4")
   seed_vid_2.video.attach(io: seed_vid_2_attachment, filename: 'popeye_president_video')

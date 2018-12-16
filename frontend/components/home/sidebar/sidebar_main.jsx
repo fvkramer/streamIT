@@ -3,11 +3,10 @@ import React from 'react';
 const SideBarMain = () => {
   return (
     <div className="sidebar-main-top">
-      Main Navigation
-     <ul>
-      <li><a href=""><button className="home-icon"></button><span>Home</span></a></li>
-      <li><a href=""><button className="trending-icon"></button><span>Trending</span></a></li>
-      <li><a href=""><button className="history-icon"></button><span>History</span></a></li>
+     <ul className="sidebar-ul-links">
+      <li><a href=""><i className="core-links-home-icon"></i><span>Home</span></a></li>
+      <li><a href=""><i className="core-links-trending-icon"></i><span>Trending</span></a></li>
+      <li><a href=""><i className="core-links-history-icon"></i><span>History</span></a></li>
      </ul>  
     </div>
   )
