@@ -4,7 +4,11 @@ import Video from './videos/video';
 const Music = () => {
   return (
     <div className="feed-sub-container-2">
-      <span>Music</span>
+      <div className="feed-title-header">
+        <span>Music</span>
+        <button className="subscribe-button">Subscibe 673K</button>
+      </div>
+      
       <div className="feed-sub-item-container-recommended">
         <div className="grid-item"><Video /></div>
         <div className="grid-item"><Video /></div>

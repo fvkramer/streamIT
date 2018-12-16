@@ -25,5 +25,6 @@
  .main-feed-container {
    width: 1220px;
    height: 500px;
+   border-bottom: none;
  }
 
