@@ -39,6 +39,7 @@ seed_vid_1 = Video.create!(title: "Got Castles", description: "Animated musical 
   seed_vid_1_attachment = open("https://s3-us-west-1.amazonaws.com/streamit-videos/animations/got_castles.mp4")
   seed_vid_1.video.attach(io: seed_vid_1_attachment, filename: 'got_castles_video')
 
+
 seed_vid_2 = Video.create!(title: "Popeye For President", description: "Not even Chuck Norris can stop PopEye from the Presidency", category: 'Film and Animation', channel_id: 12) # https://s3-us-west-1.amazonaws.com/streamit-videos/animations/popeye_president.mp4
   seed_vid_2_attachment = open("https://s3-us-west-1.amazonaws.com/streamit-videos/animations/popeye_president.mp4")
   seed_vid_2.video.attach(io: seed_vid_2_attachment, filename: 'popeye_president_video')
@@ -51,7 +52,7 @@ seed_vid_4 = Video.create!(title: "Sintel", description: "An Adventurer's Tail",
   seed_vid_4_attachment = open("https://s3-us-west-1.amazonaws.com/streamit-videos/animations/sintel_blender.mp4")
   seed_vid_4.video.attach(io: seed_vid_4_attachment, filename: 'sintel_blender_video')
 
-seed_vid_5 = Video.create!(title: "The Three Stooges See Find a Pet", description: "Three Stooges find themselves in a pickle. Stooginess ensues.", category: 'Film and Animation', channel_id: 12) # https://s3-us-west-1.amazonaws.com/streamit-videos/animations/three_stooges.mp4
+seed_vid_5 = Video.create!(title: "The Three Stooges Find a Pet", description: "Three Stooges find themselves in a pickle. Stooginess ensues.", category: 'Film and Animation', channel_id: 12) # https://s3-us-west-1.amazonaws.com/streamit-videos/animations/three_stooges.mp4
   seed_vid_5_attachment = open("https://s3-us-west-1.amazonaws.com/streamit-videos/animations/three_stooges.mp4")
   seed_vid_5.video.attach(io: seed_vid_5_attachment, filename: 'three_stooges_video')
 
@@ -223,3 +224,20 @@ seed_vid_47 = Video.create!(title: "Apple. More Marketing. Buy.", description: "
   seed_vid_47_attachment = open("https://s3-us-west-1.amazonaws.com/streamit-videos/tech/apple_presentation.mp4")
   seed_vid_47.video.attach(io: seed_vid_47_attachment, filename: 'apple_presentation_video')
 
+
+#Views
+  #view = View.create!(user_id: '', video_id: '')
+  #users = 20
+  #videos = 47
+#weighted_vids = 19, 26, 29, 31, 33, 4, 14, 20, 16, 25
+
+#gives weights to preferred videos, so they will be more likely to appear on recommended page
+user_ids = (1..20).to_a
+weighted_vids = [19,26,29,31,33,4,14,20,16,25]
+video_ids = (1..47).to_a.concat(weighted_vids.reduce([]) { |new_arr, vid_id| new_arr.concat([vid_id] * 10)}).sort
+
+View.delete_all
+
+1000.times do 
+  View.create!(user_id: user_ids.sample, video_id: video_ids.sample)
+end

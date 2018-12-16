@@ -3,4 +3,5 @@ class Video < ApplicationRecord
  
   has_one_attached :video
   has_many :likes 
+  has_many :views
 end
