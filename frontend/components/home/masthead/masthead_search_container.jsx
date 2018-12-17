@@ -2,13 +2,12 @@ import { connect } from 'react-redux';
 import MastHeadSearch from './masthead_search';
 
 //
-import { findVideos } from '../../../util/video_api_util';
+import { searchVideos } from '../../../actions/video_actions';
 
 //need to write search api query
 //uses search term to query database for all videos
 const mdp = dispatch => ({
-  findVideos: searchQuery => dispatch(findVideos(searchQuery))
+  searchVideos: searchQuery => dispatch(searchVideos(searchQuery))
 })
-
 
 export default connect(null, mdp)(MastHeadSearch);

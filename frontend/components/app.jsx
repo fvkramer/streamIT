@@ -1,14 +1,12 @@
 import React from 'react';
-import { Link,
-         Route,
-         Redirect,
-         Switch} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 //containers
 import Modal from './modal/modal';
 import MastHead from './home/masthead/masthead';
 import SectionSideBar from './home/sidebar/feed_sidebar';
-import Feed from './home/feed/feed';      
+import Feed from './home/feed/feed'; 
+import SearchResultsContainer from './search_results/search_results';     
 
 const App = () => (
   <div className="main-container">
@@ -18,10 +16,9 @@ const App = () => (
     </header>
     <section className="main-section">
       <SectionSideBar />
-      <Feed />
+      <Route exact path="/" component={Feed} />
+      <Route path="/results/:searchQuery" component={SearchResultsContainer} />
     </section>
-    <Switch>
-    </Switch>
   </div>
 )
 

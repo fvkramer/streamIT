@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class MastHeadSearch extends React.Component {
   constructor(props) {
@@ -12,11 +13,10 @@ class MastHeadSearch extends React.Component {
   }
 
   handleSubmit(e) {
-    // e.preventDefault();
-    //need to redirect to .com/results
+    e.preventDefault();
   }
 
-  update() {
+  update(e) {
     this.setState({
       searchQuery: e.target.value
     })
@@ -25,11 +25,13 @@ class MastHeadSearch extends React.Component {
   render() {
     return (
       <div className="masthead-search">
-        <form className="masthead-search-form">
-          <input type="text" onChange={this.update}/>
-          <button id="search-icon-legacy" 
-            className="masthead-search-button" 
-            aria-label="Search"><i id="i-tag" className="fa fa-search"></i></button>
+        <form className="masthead-search-form" onSubmit={this.handleSubmit}>
+          <input type="text" onChange={(e) => this.update(e)}/>
+          <Link to={`/results/${this.state.searchQuery}`}>
+            <button id="search-icon-legacy"
+              className="masthead-search-button"
+              aria-label="Search"><i id="i-tag" className="fa fa-search"></i></button>
+          </Link>
         </form>
       </div>
     )

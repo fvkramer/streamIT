@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/video_api_util';
+import * as APISearch from '../util/search_api_util';
 
 export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS';
 export const RECEIVE_VIDEO = 'RECEIVE_VIDEO';
@@ -6,7 +7,6 @@ export const REMOVE_VIDEO = 'REMOVE_VIDEO';
 
 
 //pojos
-
 export const receiveVideos = (videos) => ({
   type: RECEIVE_VIDEOS,
   videos
@@ -43,4 +43,9 @@ export const updateVideo = video => dispatch => (
 
 export const deleteVideo = videoId => dispatch => (
   APIUtil.deleteVideo(videoId).then(video => dispatch(removeVideo(videoId)))
+)
+
+//search thunk
+export const searchVideos = searchQuery => dispatch => (
+  APISearch.searchVideos(searchQuery).then(videos => dispatch(receiveVideos(videos)))
 )
