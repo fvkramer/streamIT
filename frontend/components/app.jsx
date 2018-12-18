@@ -1,13 +1,13 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 //containers
 import Modal from './modal/modal';
 import MastHead from './home/masthead/masthead';
-import SectionSideBar from './home/sidebar/feed_sidebar';
 import Feed from './home/feed/feed'; 
+import SectionSideBar from './home/sidebar/feed_sidebar';
 import SearchResultsContainer from './search_results/search_results';     
-// import SingleVideoContainer from './home/single_video_display/single_video';
+import SingleVideoContainer from './home/single_video_display/single_video_container';
 
 const App = () => (
   <div className="main-container">
@@ -16,10 +16,10 @@ const App = () => (
       <MastHead />
     </header>
     <section className="main-section">
+      <Route path="/watch/:videoId" component={SingleVideoContainer} />
       <SectionSideBar />
       <Route exact path="/" component={Feed} />
       <Route path="/results/:searchQuery" component={SearchResultsContainer} />
-      {/* <Route path="/watch/:videoId" component={SingleVideoContainer} /> */}
     </section>
   </div>
 )

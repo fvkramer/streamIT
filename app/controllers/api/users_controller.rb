@@ -1,6 +1,7 @@
 class Api::UsersController < ApplicationController 
     def show
       @user = User.find(params[:id])
+      @videos = @user.videos.with_attached_video.with_attached_preview_image
     end
     
     def create

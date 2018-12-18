@@ -1,0 +1,49 @@
+.single-video-display-container {
+  width: 100%;
+}
+
+.single-video-image-container {}
+
+.single-video-info {
+  display: flex;
+  padding: 15px;
+}
+
+//first block
+.single-video-specific-details {
+  border: 1px solid black;
+  width: 70%;
+}
+
+.single-video-title-views {
+  border: 1px solid black;
+}
+
+.single-video-channel-info {
+  border: 1px solid black;
+}
+
+.single-video-channel-comments {
+  border: 1px solid black;
+}
+
+.video-title-header { 
+  font-size: 20px;
+}
+
+#video-data-info {
+  display: flex;
+}
+
+.video-likes {
+  background-image: image-url("video_likes.png");
+  width: 100px;
+  height: 20px;
+  background-position: 10px 0px;
+}
+
+//second block
+.single-video-recommended-videos {
+  border: 1px solid pink;
+  width: 30%;
+}

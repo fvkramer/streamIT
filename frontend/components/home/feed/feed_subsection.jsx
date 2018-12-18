@@ -34,6 +34,7 @@ class FeedSubsection extends React.Component {
         key={video.id}
         title={video.title}
         description={video.description}
+        created_at={video.created_at}
         category={video.description}
         image_preview={video.thumbnail}
       />)

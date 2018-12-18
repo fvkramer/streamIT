@@ -33,7 +33,7 @@ const MastHead = ({userAuth, signOut, currentUser}) => {
     }
 
     return (
-      <div className="masthead-container">
+      <div id="masthead-container-selector" className="masthead-container">
         <button className="masthead-nav-bars"><i className="fa fa-bars"></i></button>
         <button className="youtube-logo"></button>
         <MastHeadSearchContainer />
