@@ -1,5 +1,4 @@
 import * as APIUtil from '../util/video_api_util';
-import * as APISearch from '../util/search_api_util';
 
 export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS';
 export const RECEIVE_VIDEO = 'RECEIVE_VIDEO';
@@ -46,6 +45,3 @@ export const deleteVideo = videoId => dispatch => (
 )
 
 //search thunk
-export const searchVideos = searchQuery => dispatch => (
-  APISearch.searchVideos(searchQuery).then(videos => dispatch(receiveVideos(videos)))
-)
