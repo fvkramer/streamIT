@@ -1,11 +1,11 @@
 import React from 'react';
 
-
-const VideoDescription = () => {
+const VideoDescription = (props) => {
   return (
     <div className="video-description">
-      Test Description
-      Views
+      <h5>{props.title}</h5>
+      Creator
+      <span>Views {props.view_count}</span>
     </div>
   );
 }

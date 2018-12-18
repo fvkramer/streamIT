@@ -1,9 +1,11 @@
 class Api::VideosController < ApplicationController
   #need to query search results to show only a few videos
   def index
-    @videos = Video.select('title, videos.id, COUNT(*) as views').joins(:views).group('title').order('views DESC').limit(10) 
-    Video.select('title, videos.id, COUNT(*) as view_count').joins(:views).group('videos.id').order('view_count DESC').limit(10)
-    @videos = Video.get_views
+    @videos = Video.select('title, description, category, videos.id, COUNT(*) as view_count')
+                    .joins(:views)
+                    .group('videos.id')
+                    .order('view_count DESC')
+                    .limit(10)
   end
 
   def show

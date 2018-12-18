@@ -1,33 +1,11 @@
 import React from 'react';
 
-class VideoDisplay extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  // componentDidMount() {
-  //   this.props.fetchVideo(14)
-  // }
-
-  render() {
-    // let video;
-    
-    // if (this.props.videos[14] === undefined) {
-    //   video = null;
-    // } else {
-    //   video = (<video
-    //     width="210"
-    //     height="150"
-    //     controls
-    //     src={this.props.videos[14].src}></video>)
-    // }
-    return (
-      <div className="video-display">
-          Hello
-          {/* {video}  */}
-      </div>
-    )
-  }
+const VideoDisplay = props => {
+  return (
+    <div className="video-display">
+        <img height="118" width="200" src={props.image_preview} alt=""/>
+    </div>
+  )
 }
 
 export default VideoDisplay;
