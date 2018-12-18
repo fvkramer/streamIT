@@ -4,12 +4,8 @@ import Recommended from './recommended';
 import FeedSubsection from './feed_subsection';
 
 const Feed = () => {
-  // const channels = ["AnimaTV", "Lifestyle Life",
-  //                 'Let\'s Learn', "Industry",
-  //                 "Beats by Moshe", "Tech at Large",
-  //                 "Speedster"]
-  const channel_ids = [12, 13, 14, 15, 16, 17,
-                      18, 19, 20]
+
+  const channel_ids = [12, 13, 14, 15, 16, 17, 18, 19, 20]
   
   const subsections = channel_ids.map(channel_id => {
     return (
