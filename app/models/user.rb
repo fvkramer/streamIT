@@ -8,8 +8,8 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 
-  #AWS testing
-  has_one_attached :video
+  has_many :videos,
+    foreign_key: :channel_id
   has_many :subscribers
 
   before_validation :ensure_session_token
