@@ -43,26 +43,7 @@ class SingleVideo extends React.Component {
     if (video === undefined) {
       return null;
     }
-
-    // const recommendedVids = this.props.recommendedVids;
-    // const vidItems = Object.values(recommendedVids)
-    // if (vidItems.length === 0) {
-    //   return null;
-    // }
     
-    // const recommendedVideos = vidItems.map(video => {
-    //   return (
-    //     <Video 
-    //       id={video.id}
-    //       key={video.id}
-    //       title={video.title}
-    //       description={video.description}
-    //       image_preview={video.thumbnail}
-    //       view_count={video.view_count}
-    //     />
-    //   )
-    // })
-
     return(
       <div className="single-video-display-container">
 

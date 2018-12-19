@@ -16,10 +16,10 @@ const App = () => (
       <MastHead />
     </header>
     <section className="main-section">
-      <Route path="/watch/:videoId" component={SingleVideoContainer} />
       <SectionSideBar />
-      <Route exact path="/" component={Feed} />
       <Route path="/results/:searchQuery" component={SearchResultsContainer} />
+      <Route path="/watch/:videoId" component={SingleVideoContainer} />
+      <Route exact path="/" component={Feed} />
     </section>
   </div>
 )
