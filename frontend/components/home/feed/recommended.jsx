@@ -2,7 +2,7 @@ import React from 'react';
 import Video from './videos/video';
 
 import { fetchVideos } from '../../../actions/video_actions';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 const msp = state => ({
   videos: state.entities.videos
