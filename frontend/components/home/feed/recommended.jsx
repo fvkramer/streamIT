@@ -31,7 +31,8 @@ class Recommended extends React.Component {
       video_displays = Object.values(videos).map(video => {
         return (
           <div className="display-video">
-            <Video 
+            <Video
+              id={video.id}
               key={video.id}
               title={video.title} 
               description={video.description}

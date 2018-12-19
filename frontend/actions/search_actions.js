@@ -8,5 +8,11 @@ export const receiveSearches = videos => ({
 })
 
 export const searchVideos = searchQuery => dispatch => (
-  APISearch.searchVideos(searchQuery).then(videos => dispatch(receiveSearches(videos)))
+  APISearch.searchVideos(searchQuery)
+    .then(videos => dispatch(receiveSearches(videos)))
+)
+
+export const findRecommendedVideos = category => dispatch => (
+  APISearch.findRecommendedVideos(category)
+    .then(videos => dispatch(receiveSearches(videos)))
 )

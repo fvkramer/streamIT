@@ -30,7 +30,8 @@ class FeedSubsection extends React.Component {
     const channel_object = this.props.channelVideos[this.props.channel_id];
     const channel_name = channel_object.username;
     let channel_videos = channel_object.channel_videos.map(video => {
-      return (<Video 
+      return (<Video
+        id={video.id} 
         key={video.id}
         title={video.title}
         description={video.description}

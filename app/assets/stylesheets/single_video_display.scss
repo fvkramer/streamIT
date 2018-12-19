@@ -2,7 +2,9 @@
   width: 100%;
 }
 
-.single-video-image-container {}
+.single-video-image-container video {
+  width: 100%;
+}
 
 .single-video-info {
   display: flex;

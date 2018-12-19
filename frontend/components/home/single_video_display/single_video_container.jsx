@@ -34,10 +34,11 @@ class SingleVideo extends React.Component {
       return null;
     }
 
+    // debugger;
     return(
       <div className="single-video-display-container">
         <section className="single-video-image-container">
-          <iframe width="1127" height="400" src="https://www.youtube.com/embed/MUpfO4x8Ch8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <video controls src={video.src} height="400"></video>
         </section>
         <section className="single-video-info">
           <article className="single-video-specific-details">

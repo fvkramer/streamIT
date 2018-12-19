@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :videos
     resources :results, only: [:index]
     resources :feed, only: [:show]
+    get 'results/:category', :to => 'results#recommended_search'
   end
   
   root "static_pages#root"

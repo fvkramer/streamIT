@@ -5,3 +5,11 @@ export const searchVideos = searchQuery => (
     data: {searchQuery}
   })
 )
+
+export const findRecommendedVideos = category => (
+  $.ajax({
+    method: 'GET',
+    url: "api/results/:category",
+    data: {category}
+  })
+)

@@ -6,7 +6,7 @@ import VideoDescription from './video_description';
 const Video = (props) => {
   return ( 
     <div className="video-container">
-      <VideoDisplay image_preview={props.image_preview}/>
+      <VideoDisplay video_id={props.id} image_preview={props.image_preview}/>
       <VideoDescription 
         title={props.title}
         description={props.description}
