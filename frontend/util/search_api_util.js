@@ -9,7 +9,6 @@ export const searchVideos = searchQuery => (
 export const findRecommendedVideos = category => (
   $.ajax({
     method: 'GET',
-    url: "api/results/:category",
-    data: {category}
+    url: `api/results/${category}`,
   })
 )
