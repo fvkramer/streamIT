@@ -25,7 +25,6 @@ class FeedSubsection extends React.Component {
     if (this.props.channelVideos[this.props.channel_id] === undefined) {
       return null;
     }
-    // debugger;
 
     const channel_object = this.props.channelVideos[this.props.channel_id];
     const channel_name = channel_object.username;
@@ -34,6 +33,7 @@ class FeedSubsection extends React.Component {
         id={video.id} 
         key={video.id}
         title={video.title}
+        view_count={video.view_count}
         description={video.description}
         created_at={video.created_at}
         category={video.description}

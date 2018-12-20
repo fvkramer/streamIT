@@ -37,6 +37,7 @@ class Recommended extends React.Component {
               title={video.title} 
               description={video.description}
               category={video.category}
+              channel_title={video.channel_title}
               view_count={video.view_count}
               image_preview={video.image_preview} />
           </div>

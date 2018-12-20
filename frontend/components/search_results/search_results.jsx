@@ -2,9 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { searchVideos } from '../../actions/search_actions';
 import { Link } from 'react-router-dom';
-import Video from '../home/feed/videos/video';
 import VideoDisplay from '../home/feed/videos/video_display';
-import VideoDescription from '../home/feed/videos/video_description';
 
 
 const msp = (state, ownProps) => ({
