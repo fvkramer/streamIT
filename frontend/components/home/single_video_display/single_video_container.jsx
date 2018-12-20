@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 
 import { fetchVideo } from '../../../actions/video_actions';
 import { findRecommendedVideos } from '../../../actions/search_actions';
-import { Video } from '../feed/videos/video.jsx';
+
+import FormattedRecommendedVideo from './formatted_recommended_vids';
+
 
 const msp = state => ({
   video: state.entities.videos,
@@ -29,11 +31,6 @@ class SingleVideo extends React.Component {
 
     this.props.fetchVideo(this.state.videoId);
   }
-
-  // componentDidUpdate() {
-  //   const videoId = this.state.videoId
-  //   this.props.findRecommendedVideos(this.props.video[videoId].category)
-  // }
   
   render() {
     const video_object = this.props.video
@@ -43,6 +40,25 @@ class SingleVideo extends React.Component {
     if (video === undefined) {
       return null;
     }
+
+    if (Object.values(this.props.recommendedVids).length === 0) {
+      this.props.findRecommendedVideos(this.props.video[videoId].category)
+      return null;
+    }
+
+    const recommendedVideos = Object.values(this.props.recommendedVids)
+                                    .map(video => {
+                                      return (
+                                          <FormattedRecommendedVideo
+                                            key={video.id}
+                                            id={video.id}
+                                            title={video.title}
+                                            channel={video.channel_title}
+                                            image_preview={video.thumbnail}
+                                            views={video.view_count}
+                                          /> 
+                                      )
+                                    })
     
     return(
       <div className="single-video-display-container">
@@ -90,7 +106,8 @@ class SingleVideo extends React.Component {
             </div>
           </article>
           <aside className="single-video-recommended-videos">
-              {/* {recommendedVideos} */}
+              <h1>Up Next</h1>
+              {recommendedVideos}
           </aside>
         </section>
       </div>
