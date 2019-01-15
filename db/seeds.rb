@@ -387,4 +387,11 @@ end
 
 #subscriptions seeding
 
+user_ids = (1..20).to_a
 channel_ids = (12..20).to_a
+
+Subscription.delete_all
+
+1000.times do
+  Subscription.create!(user_id: user_ids.sample, channel_id: channel_ids.sample)
+end

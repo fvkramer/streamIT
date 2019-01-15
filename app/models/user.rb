@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :videos,
     foreign_key: :channel_id
  
-  has_many :subscribers,
+  has_many :subscriptions,
     foreign_key: :channel_id
 
   before_validation :ensure_session_token
