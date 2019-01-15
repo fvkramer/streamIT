@@ -383,3 +383,4 @@ View.delete_all
 1000.times do 
   View.create!(user_id: user_ids.sample, video_id: video_ids.sample)
 end
+
