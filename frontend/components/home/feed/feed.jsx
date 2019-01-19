@@ -1,7 +1,9 @@
 import React from 'react';
 
+import SectionSideBar from '../sidebar/feed_sidebar';
 import Recommended from './recommended';
 import FeedSubsection from './feed_subsection';
+
 
 const Feed = () => {
   const channel_ids = [12, 13, 14, 15, 16, 17, 18, 19, 20];
@@ -13,9 +15,12 @@ const Feed = () => {
   ));
 
   return (
-    <section className="feed-main-container">
-      <Recommended />
-      { subsections }
+    <section className="main-home-container">
+      <SectionSideBar />
+      <section className="feed-main-container">
+        <Recommended />
+        {subsections}
+      </section>
     </section>
   );
 };

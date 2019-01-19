@@ -26,9 +26,6 @@ class SingleVideo extends React.Component {
   }
 
   componentDidMount() {
-    const sidebar = document.getElementById('sidebar-component');
-    sidebar.parentNode.removeChild(sidebar);
-
     this.props.fetchVideo(this.state.videoId);
   }
 
