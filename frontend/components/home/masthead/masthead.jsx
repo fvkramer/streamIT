@@ -36,10 +36,15 @@ const MastHead = ({ userAuth, signOut, currentUser }) => {
   return (
     <div id="masthead-container-selector" className="masthead-container">
       <button className="masthead-nav-bars"><i className="fa fa-bars" /></button>
-      <Link to="/">
-        <button className="youtube-logo" />
-        {' '}
-      </Link>
+      <div className="masthead-logo-container">
+        <Link to="/">
+          <div>
+            <button className="youtube-logo" />
+            {' '}
+            <span>StreamIT</span>
+          </div>
+        </Link>
+      </div>
       <MastHeadSearchContainer />
       <div className="masthead-icons">
         <button aria-label="Create a video or post" className="msth-create-video" />

@@ -15,10 +15,28 @@
   border: none;
 }
 
+.masthead-logo-container div{
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 20px;
+
+  span {
+    position: absolute;
+    right: -52px;
+    bottom: 10px;
+    color: black;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
 .youtube-logo {
-  background-image: image-url("youtube_logo_small.png");
-  background-size: 100px 40px;
-  height: 40px;
+  background-image: image-url("home_logo.png");
+  background-size: 95px 63px;
+  height: 54px;
   width: 100px;
 
   border: none;
