@@ -8,20 +8,18 @@ import SideBarAdditionalFeatures from './sidebar_additional_features';
 import SideBarSettings from './sidebar_settings';
 import SideBarFooter from './sidebar_footer';
 
-const SectionSideBar = () => {
-  return(
-    <div>
-      <aside id="sidebar-component" className="sidebar-container">
-        <SideBarMain />
-        <BestLinks />
-        <SideBarBrowse />
-        <SideBarSignIn />
-        <SideBarAdditionalFeatures />
-        <SideBarSettings />
-        <SideBarFooter />
-      </aside>
-    </div>
-  )
-}
+const SectionSideBar = () => (
+  <div>
+    <aside id="sidebar-component" className="sidebar-container">
+      <SideBarMain />
+      <BestLinks />
+      <SideBarBrowse />
+      <SideBarSignIn />
+      <SideBarAdditionalFeatures />
+      <SideBarSettings />
+      <SideBarFooter />
+    </aside>
+  </div>
+);
 
 export default SectionSideBar;

@@ -1,16 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Video from './videos/video';
 
 import { fetchVideos } from '../../../actions/video_actions';
-import { connect } from 'react-redux';
 
 const msp = state => ({
-  videos: state.entities.videos
-})
+  videos: state.entities.videos,
+});
 
 const mdp = dispatch => ({
-  fetchVideos: () => dispatch(fetchVideos())
-})
+  fetchVideos: () => dispatch(fetchVideos()),
+});
 
 class Recommended extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class Recommended extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchVideos()
+    this.props.fetchVideos();
   }
 
   render() {
@@ -27,24 +27,23 @@ class Recommended extends React.Component {
     let video_displays;
     if (videos.id === null) {
       return null;
-    } else {
-      video_displays = Object.values(videos).map(video => {
-        return (
-          <div className="display-video">
-            <Video
-              id={video.id}
-              key={video.id}
-              title={video.title} 
-              description={video.description}
-              category={video.category}
-              channel_title={video.channel_title}
-              view_count={video.view_count}
-              image_preview={video.image_preview} />
-          </div>
-        )
-      })
     }
-    
+    video_displays = Object.values(videos).map(video => (
+      <div className="display-video">
+        <Video
+          id={video.id}
+          key={video.id}
+          title={video.title}
+          description={video.description}
+          category={video.category}
+          channel_title={video.channel_title}
+          view_count={video.view_count}
+          image_preview={video.image_preview}
+        />
+      </div>
+    ));
+
+
     return (
       <div className="feed-sub-container-1">
         <span>Recommended</span>
@@ -52,7 +51,7 @@ class Recommended extends React.Component {
           { video_displays }
         </div>
       </div>
-    )
+    );
   }
 }
 
