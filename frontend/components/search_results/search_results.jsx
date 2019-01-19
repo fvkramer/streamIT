@@ -26,6 +26,15 @@ class SearchResults extends React.Component {
     this.props.searchVideos(this.state.searchQuery);
   }
 
+  componentDidUpdate() {
+    if (this.state.searchQuery !== this.props.searchQuery) {
+      this.setState({
+        searchQuery: this.props.searchQuery,
+      });
+      this.props.searchVideos(this.props.searchQuery);
+    }
+  }
+
   render() {
     const video_objects = Object.values(this.props.videos);
     if (video_objects.length === 0) {
