@@ -15,6 +15,7 @@
     width: 246px;
     height: 138px;
   }
+
 }
 
 #menu-subrender {
@@ -41,6 +42,10 @@
     cursor: pointer;
   }
 }
+
+ #nothing-found-header {
+    font-size: 25px;
+  }
 
 .video-search-results-container {
   display: flex;

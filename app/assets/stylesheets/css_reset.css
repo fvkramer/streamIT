@@ -41,5 +41,8 @@ abbr,acronym { border:0;
 }
 
 .main-container {
-  width: 100%;
+  width: 1331px;
+  border-right: 1px solid #ccc;
+  box-shadow: 3px 0px #eee;
+  margin: 0 auto 0 0;
 }

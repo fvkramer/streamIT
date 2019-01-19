@@ -5,8 +5,8 @@ class MastHeadSearch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchQuery: ''
-    }
+      searchQuery: '',
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -18,23 +18,28 @@ class MastHeadSearch extends React.Component {
 
   update(e) {
     this.setState({
-      searchQuery: e.target.value
-    })
+      searchQuery: e.target.value,
+    });
   }
 
   render() {
     return (
       <div className="masthead-search">
         <form className="masthead-search-form" onSubmit={this.handleSubmit}>
-          <input type="text" onChange={(e) => this.update(e)}/>
+          <input type="text" onChange={e => this.update(e)} />
           <Link to={`/results/${this.state.searchQuery}`}>
-            <button id="search-icon-legacy"
+            <button
+              id="search-icon-legacy"
               className="masthead-search-button"
-              aria-label="Search"><i id="i-tag" className="fa fa-search"></i></button>
+              aria-label="Search"
+            >
+              <i id="i-tag" className="fa fa-search" />
+
+            </button>
           </Link>
         </form>
       </div>
-    )
+    );
   }
 }
 
