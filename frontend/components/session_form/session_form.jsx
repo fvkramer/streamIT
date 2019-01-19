@@ -5,29 +5,29 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
     return e => this.setState({
-      [field]: e.currentTarget.value
+      [field]: e.currentTarget.value,
     });
   }
 
   handleSubmit(e, type) {
     e.preventDefault();
     let user = Object.assign({}, this.state);
-    switch(type) {
-      case "signin":
+    switch (type) {
+      case 'signin':
         this.props.processForm(user);
         break;
-      case "signup":
+      case 'signup':
         this.props.signUp(user);
         break;
-      case "demo":
-        user = { username: 'DemoUser', password: 'password'}
+      case 'demo':
+        user = { username: 'DemoUser', password: 'password' };
         this.props.processForm(user);
         break;
       default:
@@ -35,51 +35,32 @@ class SessionForm extends React.Component {
     }
   }
 
-  
 
   renderErrors() {
-    if (this.props.errors.length === 2) {
+    if (this.props.errors.length >= 1) {
       return (
-        <div className="login-errors-2">
-          <ul>
-            {this.props.errors.map((error, i) => (
-              <li key={`error-${i}`}>
-                {error}
-              </li>
-            ))}
-          </ul>
-        </div> 
+        <div className="login-errors">
+          Invalid Username/Credentials
+        </div>
       );
-    } else if (this.props.errors.length === 1) {
-      return (
-        <div className="login-errors-1">
-          <ul>
-            {this.props.errors.map((error, i) => (
-              <li key={`error-${i}`}>
-                {error}
-              </li>
-            ))}
-          </ul>
-        </div> 
-      );
-    } else {
-      return null;
     }
+    return null;
   }
 
   render() {
     return (
       <div className="login-form-container">
-      {/* onSubmit={this.handleSubmit}  */}
+        {/* onSubmit={this.handleSubmit}  */}
         <form className="login-form-box">
-          <br />
-          <div className="login-youtube-logo"><img src="https://image.freepik.com/free-icon/youtube-logo_318-33597.jpg" alt="" height="60" width="60"/></div>
           {this.renderErrors()}
+          <br />
+          <div className="login-youtube-logo"><img src="https://image.freepik.com/free-icon/youtube-logo_318-33597.jpg" alt="" height="60" width="60" /></div>
           <div className="login-form">
             <br />
-            <div onClick={this.props.closeModal} className="login-close-button">X</div> 
+            <div onClick={this.props.closeModal} className="login-close-button">X</div>
             <label>
-              <input type="text"
+              <input
+                type="text"
                 value={this.state.username}
                 placeholder="Username"
                 onChange={this.update('username')}
@@ -88,7 +69,8 @@ class SessionForm extends React.Component {
             </label>
             <br />
             <label>
-              <input type="password"
+              <input
+                type="password"
                 value={this.state.password}
                 placeholder="Password"
                 onChange={this.update('password')}
@@ -96,10 +78,10 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <button onClick={(e) => this.handleSubmit(e, "signin")} className="submit-button">SIGN IN</button>
+            <button onClick={e => this.handleSubmit(e, 'signin')} className="submit-button">SIGN IN</button>
             <div className="signup-demo-buttons">
-              <button onClick={(e) => this.handleSubmit(e, "signup")} className="submit-button">SIGN UP</button>
-              <button onClick={(e) => this.handleSubmit(e, "demo")} className="submit-button" id="demo">DEMO LOGIN</button>
+              <button onClick={e => this.handleSubmit(e, 'signup')} className="submit-button">SIGN UP</button>
+              <button onClick={e => this.handleSubmit(e, 'demo')} className="submit-button" id="demo">DEMO LOGIN</button>
             </div>
           </div>
         </form>

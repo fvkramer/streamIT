@@ -9,8 +9,20 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
 }
 
+/* errors */
+
+.login-errors {
+  position: absolute;
+  font-weight: bold;
+  color: red;
+  bottom: 141px;
+  left: 46px;
+}
+
+/* errors end */
 
 .login-form {
   position: relative;
@@ -74,25 +86,4 @@
   font-size: 18px;
   line-height: 21px;
   padding: 0 7px;
-}
-
-/* errors */
-
-[class*="login-errors"] {
-  position: absolute;
-  background: #7ac3d0;
-  font-weight: bold;
-  padding: 3px 30px;
-  border-radius: 10px;
-}
-
-.login-errors-2 {
-  right: 24px;
-  bottom: -69px;
-  margin-left: 31px;
-}
-
-.login-errors-1 {
-  right: 47px;
-  bottom: -42px;
 }

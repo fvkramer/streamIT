@@ -1,10 +1,10 @@
 import React from 'react';
-import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
+import { closeModal } from '../../actions/modal_actions';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 
-function Modal({modal, closeModal}) {
+function Modal({ modal, closeModal }) {
   if (!modal) {
     return null;
   }
@@ -25,19 +25,15 @@ function Modal({modal, closeModal}) {
         { component }
       </div>
     </div>
-  )
+  );
 }
 
-const msp = state => {
-  return {
-    modal: state.ui.modal
-  };
-};
+const msp = state => ({
+  modal: state.ui.modal,
+});
 
-const mdp = dispatch => {
-  return {
-    closeModal: () => dispatch(closeModal())
-  };
-};
+const mdp = dispatch => ({
+  closeModal: () => dispatch(closeModal()),
+});
 
-export default connect(msp, mdp)(Modal)
+export default connect(msp, mdp)(Modal);
