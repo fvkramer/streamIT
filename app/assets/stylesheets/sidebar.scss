@@ -26,6 +26,7 @@
   align-items: center;
   padding: 2px 0;
   font-size: 14px;
+  color: black;
 }
 
 .sidebar-main-top li, a {
@@ -47,34 +48,7 @@
   height: 30px;
   fill:#909090;
 }
-// .core-links-home-icon {
-//   display: inline-block;
-//   background-image: image-url("home.png");
-//   background-size: 30px 30px;
-//   width: 30px;
-//   height: 30px;
-//   margin-right: 5px;
-// }
-
-// .core-links-trending-icon {
-//   display: inline-block;
-//   background-image: image-url("trending_and_history.png");
-//   background-position: -7px -1px;
-//   width: 30px;
-//   height: 30px;
-//   margin-left: 15px;
-// }
-
-// .core-links-history-icon {
-//   display: inline-block;
-//   background-image: image-url("trending_and_history.png");
-//   background-position: -7px -42px;
-//   width: 30px;
-//   height: 30px;
-//   margin-left: 15px;
-// }
  
-
 //sidebar best links
 
 .sidebar-main-best-links {
@@ -98,6 +72,7 @@
 .sidebar-main-best-links span {
   margin-left: 24px; 
   font-size: 14px;
+  color: black;
 }
 
 [class*="yt-best-"] {
