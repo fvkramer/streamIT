@@ -30,3 +30,4 @@ bundle.js.map
 /config/master.key
 
 bucketpolicy.md
+credentials.csv

@@ -366,7 +366,6 @@ seed_vid_47 = Video.create!(title: "Apple. More Marketing. Buy.", description: "
   seed_vid_47_photo = open("https://s3-us-west-1.amazonaws.com/streamit-videos/tech/apple_presentation.png")
   seed_vid_47.preview_image.attach(io: seed_vid_47_photo, filename: 'apple_presentation_preview' )
 
-
 #Views
   #view = View.create!(user_id: '', video_id: '')
   #users = 20
