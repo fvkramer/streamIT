@@ -383,9 +383,7 @@ View.delete_all
   View.create!(user_id: user_ids.sample, video_id: video_ids.sample)
 end
 
-
 #subscriptions seeding
-
 user_ids = (1..20).to_a
 channel_ids = (12..20).to_a
 
