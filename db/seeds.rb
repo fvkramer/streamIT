@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+ActiveRecord::Base.transaction do 
 #Users
 User.delete_all
 
@@ -27,10 +27,10 @@ u13 = User.create!(username: 'Let\'s Learn!', password: 'education', description
 u14 = User.create!(username: 'Nature', password: 'phospholipidbilayer', description: 'May Peace be With You', category: 'Nature and Camping') #14
 u15 = User.create!(username: 'Funny Home Videos', password: 'funnyvideo', description: 'Comedic vieo highlight compilation', category: 'Entertainment') #15
 u16 = User.create!(username: 'Speedster', password: 'halo3isbest', description: 'World record speed runs of the most classic arcade, RTS, and many other game types!', category: 'Gaming') #16
-u18 = User.create!(username: 'Industry', password: 'realmenhavebeards', description: 'Clean, calm, precise industrial videos', category: 'Education') #17
-u19 = User.create!(username: 'Lifestyle Life', password: 'password', description: 'Vlog of my life. The ups. The downs. The everyday.', category: 'People and Blogs') #18
-u20 = User.create!(username: 'Beats by Moshe', password: 'tothewindowtothewall', description: 'Chill, Relaxing, Hot, Popular, Beats.', category: 'Music') #19 
-u21 = User.create!(username: 'Tech at Large', password: 'mooreslaw', description: 'Subscribe for the latest and newest information on tech!', category: 'Science and Technology') #20
+u17 = User.create!(username: 'Industry', password: 'realmenhavebeards', description: 'Clean, calm, precise industrial videos', category: 'Education') #17
+u18 = User.create!(username: 'Lifestyle Life', password: 'password', description: 'Vlog of my life. The ups. The downs. The everyday.', category: 'People and Blogs') #18
+u19 = User.create!(username: 'Beats by Moshe', password: 'tothewindowtothewall', description: 'Chill, Relaxing, Hot, Popular, Beats.', category: 'Music') #19 
+u20 = User.create!(username: 'Tech at Large', password: 'mooreslaw', description: 'Subscribe for the latest and newest information on tech!', category: 'Science and Technology') #20
 
 #videos (48)
 Video.delete_all
@@ -373,7 +373,7 @@ seed_vid_47 = Video.create!(title: "Apple. More Marketing. Buy.", description: "
 #weighted_vids = 19, 26, 29, 31, 33, 4, 14, 20, 16, 25
 
 #gives weights to preferred videos, so they will be more likely to appear on recommended page
-user_ids = (1..20).to_a
+user_ids = User.all.map {|user| user.id}
 weighted_vids = [19,26,29,31,33,4,14,20,16,25]
 video_ids = (1..47).to_a.concat(weighted_vids.reduce([]) { |new_arr, vid_id| new_arr.concat([vid_id] * 10)}).sort
 
@@ -391,4 +391,6 @@ Subscription.delete_all
 
 1000.times do
   Subscription.create!(user_id: user_ids.sample, channel_id: channel_ids.sample)
+end
+
 end
