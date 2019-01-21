@@ -1,8 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 
-let plugins = []; // if using any plugins for both dev and production
-const devPlugins = []; // if using any plugins for development
+// let plugins = []; // if using any plugins for both dev and production
+// const devPlugins = []; // if using any plugins for development
 
 // const prodPlugins = [
 //   new webpack.DefinePlugin({
@@ -17,9 +17,9 @@ const devPlugins = []; // if using any plugins for development
 //   }),
 // ];
 
-plugins = plugins.concat(
-  process.env.NODE_ENV === 'production' ? prodPlugins : devPlugins,
-);
+// plugins = plugins.concat(
+//   process.env.NODE_ENV === 'production' ? prodPlugins : devPlugins,
+// );
 
 module.exports = {
   context: __dirname,
@@ -29,7 +29,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/app/assets',
   },
-  plugins,
+  // plugins,
   module: {
     rules: [
       {
