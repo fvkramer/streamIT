@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Description and Goals
 
-* Ruby version
+StreamIT is a FullStack application clone of Youtube. All seeding data is hosted through Amazon Web Services and the app infrastructure is built on a Rails/Postgres backend with React/Redux frontend. 
 
-* System dependencies
+The application runs on 
 
-* Configuration
+`ruby '2.5.3'`
 
-* Database creation
+To get started:
 
-* Database initialization
+`git clone https://github.com/fvkramer/streamIT.git`
 
-* How to run the test suite
+To install all dependencies:
 
-* Services (job queues, cache servers, search engines, etc.)
+`bundle install`
+`npm install`
 
-* Deployment instructions
+To run the migrations and seed the databse:
 
-* ...
+`bundle exec rails db:reset`
+
+This will clear existing data and seed based on a weighting mechanism for preferred videos.
+
+To run the application:
+
+`npm run webpack`
+
+`bundle exec rails server`
+
+The site should be live on localhost. Check the port number in your terminal.
+
