@@ -46,7 +46,7 @@ class FeedSubsection extends React.Component {
       <div className="feed-sub-container">
         <div className="feed-title-header">
           <span>{channel_name}</span>
-          <button className="subscribe-button">Subscibe 673K</button>
+          <button className="subscribe-button">Subscribe 673K</button>
         </div>
         <div className="feed-sub-item-container-recommended">
           { first_five_videos }
