@@ -16,7 +16,7 @@ const SideBarMain = () => (
   <div className="sidebar-main-top">
     <ul className="sidebar-ul-links">
       <li>
-        <a href="">
+        <a href="#">
           <i style={iTag}>
             <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" className="style-scope yt-icon" style={homeStyle}>
               <g className="style-scope yt-icon">
@@ -29,7 +29,7 @@ const SideBarMain = () => (
       </li>
 
       <li>
-        <a href="">
+        <a href="#">
           <i style={iTag}>
             <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" className="style-scope yt-icon" style={homeStyle}>
               <g className="style-scope yt-icon">
@@ -44,7 +44,7 @@ const SideBarMain = () => (
 
       </li>
       <li>
-        <a href="">
+        <a href="#">
           <i style={iTag}>
             <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" className="style-scope yt-icon" style={homeStyle}>
               <g className="style-scope yt-icon">

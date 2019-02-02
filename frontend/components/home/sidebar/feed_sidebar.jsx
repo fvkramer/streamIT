@@ -8,6 +8,7 @@ import SideBarAdditionalFeatures from './sidebar_additional_features';
 import SideBarSettings from './sidebar_settings';
 import SideBarFooter from './sidebar_footer';
 
+
 const SectionSideBar = () => (
   <div>
     <aside id="sidebar-component" className="sidebar-container">
